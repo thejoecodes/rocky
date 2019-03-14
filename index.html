@@ -11,32 +11,32 @@
 	        let tie = "Draw"
 	
 	        function computerPlay(){
-	        var choices = ['Rock','Paper','Scissor'];
+	        var choices = ['rock','paper','scissor'];
 	        var rand = choices[Math.floor(Math.random() * choices.length)];
 	        return rand;
 	        }
 	
-	        var userInput= prompt("Rock? Paper? Scissor? \n Enter your choice")
+	        var userInput= prompt("Rock? Paper? Scissor? \n Enter your choice").toLowerCase();
 	
 	        if (computerPlay()===userInput){
 	        console.log("Result: ", tie)
 	        }
-	        else if(computerPlay()==='Rock' && userInput==='Paper'){
+	        else if(computerPlay()==='rock' && userInput==='paper'){
 	      	console.log("Result: ", compWin);
 	        }
-	        else if(computerPlay()==='Rock' && userInput==='Scissor'){
+	        else if(computerPlay()==='rock' && userInput==='scissor'){
 	        console.log("Result: ", compWin);
 	        }
-	        else if(computerPlay()==='Scissor' && userInput==='Paper'){
+	        else if(computerPlay()==='scissor' && userInput==='paper'){
 	        console.log("Result: ", compWin);
 	        }
-	        else if(computerPlay()==='Scissor'&& userInput==='Rock'){
+	        else if(computerPlay()==='scissor'&& userInput==='rock'){
 	        console.log("Result: ", userWin);
 	        }
-	        else if(computerPlay()==='Paper' && userInput==='Rock'){
+	        else if(computerPlay()==='paper' && userInput==='rock'){
 	        console.log("Result: ", userWin);
 	        }
-	        else if(computerPlay()==='Paper' && userInput==='Scissor'){
+	        else if(computerPlay()==='paper' && userInput==='scissor'){
 	        console.log("Result: ", userWin);
 	        }
         
