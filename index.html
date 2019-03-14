@@ -6,9 +6,7 @@
 
     <body>
         <script>
-            let userWin = "You Win";
-	        let compWin =  "Computer Wins";
-	        let tie = "Draw"
+            let tie = "Draw"
 	
 	        function computerPlay(){
 	        var choices = ['rock','paper','scissor'];
@@ -16,29 +14,32 @@
 	        return rand;
 	        }
 	
+			function playerSelection(){
 	        var userInput= prompt("Rock? Paper? Scissor? \n Enter your choice").toLowerCase();
-	
-	        if (computerPlay()===userInput){
-	        console.log("Result: ", tie)
+			return userInput;
+			}
+
+	        if(computerPlay()==='rock' && playerSelection()==='paper'){
+	      	console.log("You Lose! Rock beats Paper");
 	        }
-	        else if(computerPlay()==='rock' && userInput==='paper'){
-	      	console.log("Result: ", compWin);
+	        else if(computerPlay()==='rock' && playerSelection()==='scissor'){
+	        console.log("You Lose! Rock beats Scissor");
 	        }
-	        else if(computerPlay()==='rock' && userInput==='scissor'){
-	        console.log("Result: ", compWin);
+	        else if(computerPlay()==='scissor' && playerSelection()==='paper'){
+	        console.log("You Lose! Scissor beats Paper");
 	        }
-	        else if(computerPlay()==='scissor' && userInput==='paper'){
-	        console.log("Result: ", compWin);
+	        else if(computerPlay()==='scissor'&& playerSelection()==='rock'){
+	        console.log("You win! Rock beats Scissor");
 	        }
-	        else if(computerPlay()==='scissor'&& userInput==='rock'){
-	        console.log("Result: ", userWin);
+	        else if(computerPlay()==='paper' && playerSelection()==='rock'){
+	        console.log("You win! Rock beats Paper ");
 	        }
-	        else if(computerPlay()==='paper' && userInput==='rock'){
-	        console.log("Result: ", userWin);
+	        else if(computerPlay()==='paper' && playerSelection()==='scissor'){
+	        console.log("You win! Scissor beats paper");
 	        }
-	        else if(computerPlay()==='paper' && userInput==='scissor'){
-	        console.log("Result: ", userWin);
-	        }
+			else {
+				console.log("Result: ", tie)
+			}
         
         </script>
 
