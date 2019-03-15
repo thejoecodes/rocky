@@ -7,20 +7,26 @@
     <body>
         <script>
             let tie = "Draw"
+			var choices = ['rock','paper','scissors'];
 	
 	        function computerPlay(){
-	        var choices = ['rock','paper','scissor'];
 	        var rand = choices[Math.floor(Math.random() * choices.length)];
 	        return rand;
 	        }
 	
 			function playerSelection(){
 	        var userInput= prompt("Rock? Paper? Scissor? \n Enter your choice").toLowerCase();
+
+				while(!choices.includes(userInput)){
+                	alert(`Invalid Selection! Please type Rock, Paper or Scissors. Selections are not case sensative.`)
+               		userInput = prompt(`Make a selection: Rock, Paper, Scissors`).toLowerCase();
+            		}
+
 			return userInput;
 			}
 
 	        if(computerPlay()==='rock' && playerSelection()==='paper'){
-	      	console.log("You Lose! Rock beats Paper");
+	      	console.log("You Win! Paper beats Rock");
 	        }
 	        else if(computerPlay()==='rock' && playerSelection()==='scissor'){
 	        console.log("You Lose! Rock beats Scissor");
