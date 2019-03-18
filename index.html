@@ -8,15 +8,19 @@
 
     <body>
         <script>
+
+            let choices = ['rock','paper','scissors'];
             	
 	        function computerSelection() { 
-			let choices = ['rock','paper','scissors'];
 	        var rand = choices[Math.floor(Math.random() * choices.length)];
 	        return rand;
 	        }
 	
 			function playerPlay(){
 			var userInput= prompt("Rock? Paper? Scissors? \n Enter your choice").toLowerCase();
+            if(!choices.includes(userInput)) {
+                alert("Invalid Choice.  Please type Rock, Paper or Scissors.  The choices are not case sensative.")
+            }
 			return userInput;
 			}
 
