@@ -4,9 +4,25 @@
     <head>
 		<meta charset="UTF-8">
         <title>Rock Paper Scissor Game</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
+        <div class="choices">
+            <div class="font">
+                <a href="#"><img class="rounded-img" src="imgs/rock.png" alt="Rock"></a>
+                <p>Rock</p>
+            </div>
+            <div class="font">
+                <a href="#"><img class="rounded-img" src="imgs/Paper.png" alt="Paper"></a>
+                <p>Paper</p>
+            </div>
+            <div class="font">
+                <a href="#"><img class="rounded-img" src="imgs/Scissors.png" alt="Scissor"></a>
+                <p>Scissors</p>
+            </div>
+        </div>
+    
         <script>
 
             let choices = ['rock','paper','scissors'];
@@ -17,7 +33,7 @@
 	        }
 	
 			function playerPlay(){
-			var userInput= prompt("Rock? Paper? Scissors? \n Enter your choice").toLowerCase();
+			//var userInput= prompt("Rock? Paper? Scissors? \n Enter your choice").toLowerCase();
             if(!choices.includes(userInput)) {
                 alert("Invalid Choice.  Please type Rock, Paper or Scissors.  The choices are not case sensative.")
             }
